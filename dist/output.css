@@ -568,16 +568,90 @@ video {
   }
 }
 
-.toggle__menu {
-  display: block;
-  height: 0.125rem;
-  width: 2rem;
+.header {
+  position: fixed;
+  width: 100%;
+  border-bottom-width: 4px;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-blend-mode: overlay;
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.hidden {
+.header .header__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 90rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .header .header__wrapper {
+    padding: 0;
+  }
+}
+
+.header .branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header .header__nav {
+  position: absolute;
+  top: 8.2rem;
+  right: -25rem;
+  height: 100rem;
+  border-width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  font-size: 1.5rem;
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.header .header__nav li {
+  margin: 3rem;
+  align-items: center;
+}
+
+.header .header__nav.open {
+  position: absolute;
+  left: 15rem;
+}
+
+.header .header__actions {
   display: none;
+}
+
+@media (min-width: 1024px) {
+  .header .header__actions {
+    display: flex;
+  }
+}
+
+.toggle__menu {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.toggle__menu span {
+  display: block;
+  height: .3rem;
+  width: 2rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .h-auto {
@@ -586,11 +660,6 @@ video {
 
 .w-\[3rem\] {
   width: 3rem;
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .container{

@@ -9,7 +9,33 @@
 }
 
 @layer components{
+    .header{
+    @apply  fixed w-full shadow bg-white bg-blend-overlay border-b-4
+    }
+    .header .header__wrapper{
+    @apply max-w-[90rem] mx-auto flex items-center justify-between p-[1rem] lg:p-[0]
+    }
+    .header .branding{
+    @apply flex items-center gap-[1rem]
+    }
+    .header .header__nav{
+    @apply  absolute shadow border h-[100rem] bg-white top-[8.2rem] right-[-25rem] text-[1.5rem] transition-all
+            
+    }
+    .header .header__nav li{
+    @apply m-[3rem] items-center
+    }
+    .header .header__nav.open{
+    @apply absolute left-[15rem]
+    }
+    .header .header__actions{
+        @apply hidden lg:flex 
+    }
+    
     .toggle__menu{
-    @apply  block w-[2rem] h-[0.125rem] bg-white
+    @apply flex flex-col gap-[.2rem] 
+    }
+    .toggle__menu span{
+    @apply  w-[2rem] h-[.3rem] bg-black block rounded-full 
     }
 }
