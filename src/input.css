@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+@layer components{
+    .toggle__menu{
+    @apply  block w-[2rem] h-[0.125rem] bg-white
+    }
+}
