@@ -10,7 +10,7 @@
 
 @layer components{
     .header{
-    @apply  fixed w-full shadow bg-white bg-blend-overlay border-b-4
+    @apply  fixed w-full shadow-lg bg-white bg-blend-overlay border-b-4
     }
     .header .header__wrapper{
     @apply max-w-[90rem] mx-auto flex items-center justify-between p-[1rem] lg:p-[0]
@@ -19,23 +19,79 @@
     @apply flex items-center gap-[1rem]
     }
     .header .header__nav{
-    @apply  absolute shadow border h-[100rem] bg-white top-[8.2rem] right-[-25rem] text-[1.5rem] transition-all
-            
+    @apply  absolute shadow-xl h-[100vh] bg-white font-bold top-[8.2rem] right-[-25rem] text-[1rem] transition-all
+    lg:static lg:h-auto lg:w-full lg:shadow-none lg:font-bold   
+    }
+    .header .header__nav .nav__left{
+    @apply flex flex-col lg:flex-row
+    }
+    .header .header__nav .nav__left{
+    @apply border-b-[1px] border-b-gray-400 lg:border-none
+    }
+    .header .header__nav .nav__right{
+    @apply lg:hidden 
     }
     .header .header__nav li{
     @apply m-[3rem] items-center
     }
     .header .header__nav.open{
-    @apply absolute left-[15rem]
+    @apply absolute right-[.1rem]
     }
-    .header .header__actions{
-        @apply hidden lg:flex 
+    .header .header__three{
+    @apply hidden lg:flex lg:items-center lg:gap-[1.5rem] lg:text-[1rem] lg:font-bold
     }
-    
     .toggle__menu{
     @apply flex flex-col gap-[.2rem] 
     }
     .toggle__menu span{
     @apply  w-[2rem] h-[.3rem] bg-black block rounded-full 
+    }
+
+
+    .kalbo{
+        @apply bg-white
+    }
+    .kalbo__wrapper{
+       @apply bg-gray-600 py-[2rem]
+    }
+    .kalbo__nav{
+        @apply  max-w-[25rem] flex flex-wrap gap-[2rem] mx-auto justify-center
+    }
+    .kalbo__nav li{
+        @apply p-[.5rem] rounded-md text-white
+    }
+    .kalbo__nav li.active{
+        @apply bg-blue-500
+    }
+    .kalbo__desc__wrapper{
+       @apply bg-gray-300 p-[2rem]
+    }
+    .kalbo__item__content{
+        @apply hidden
+    }
+    .kalbo__item__content img{
+        @apply w-[10rem] h-auto rounded-full bg-green-800 px-[1rem]
+    }
+    .kalbo__item__content.active{
+        @apply flex gap-[2rem] items-center justify-center
+    }
+    .kalbo__text h2{
+        @apply text-[1.5rem] font-bold mb-[1rem]
+    }
+    .kalbo__text table tr{
+        @apply h-[5rem] flex flex-col
+    }
+    .kalbo__text table tr td:first-child{
+        @apply font-semibold
+    }
+
+    .beverage{
+        @apply bg-white
+    }
+    .beverage__wrapper{
+        @apply py-[2rem]
+    }
+    .beverage__nav{
+        @apply bg-fwhite-light shadow-lg flex flex-wrap justify-center max-w-[40rem] mx-auto gap-[2rem]
     }
 }
