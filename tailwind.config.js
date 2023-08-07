@@ -6,6 +6,9 @@ module.exports = {
       colors:{
         'fwhite-light':'rgb(241,248,245)',
         'fwhite-dark':'rgb(212,233,226)'
+      },
+      backgroundImage:{
+        'star':"url('../img/img/rewards/star.png')"
       }
     },
   },

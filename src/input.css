@@ -13,7 +13,7 @@
     @apply  fixed w-full shadow-lg bg-white bg-blend-overlay border-b-4
     }
     .header .header__wrapper{
-    @apply max-w-[90rem] mx-auto flex items-center justify-between p-[1rem] lg:p-[0]
+    @apply max-w-[90rem] mx-auto flex items-center justify-between lg:p-[]
     }
     .header .branding{
     @apply flex items-center gap-[1rem]
@@ -45,6 +45,10 @@
     }
     .toggle__menu span{
     @apply  w-[2rem] h-[.3rem] bg-black block rounded-full 
+    }
+
+    .buhok.open{
+        @apply h-[100vh] w-[100%] bg-black absolute z-[999] top-[5.6rem] left-[0] opacity-[.5] transition-all
     }
 
 
@@ -85,6 +89,21 @@
         @apply font-semibold
     }
 
+    .btn{
+        background-color: transparent;
+        padding: .2rem 1rem;
+        border-radius: 3rem;
+        border:1px solid #2b2b2b;
+    }
+    .btn.bg--green{
+        background:#1E3932;
+        color:#ffffff;
+        border:1px solid #ffffff;
+    }
+    .btn.bg--green:hover {
+        background-color: #006341;
+    }
+
     .beverage{
         @apply bg-white
     }
@@ -94,4 +113,31 @@
     .beverage__nav{
         @apply bg-fwhite-light shadow-lg flex flex-wrap justify-center max-w-[40rem] mx-auto gap-[2rem]
     }
+
+    /*BANNER*/
+    .banner{
+        background-image: url("../img/img/rewards/star.png");
+        background-size:cover;
+        background-color:#D0EAE4;
+        height:550px;
+        background-position-y:15rem;
+        background-repeat:no-repeat;
+        @media screen and (min-width:1024px){
+            background-position-y:5rem;
+            background-size:contain;
+            background-position-x:70rem;
+            height:800px;
+            display:flex;
+            align-items: center;
+        }
+    
+    }
+
+    .start{
+        @apply  bg-white 
+    }
+
+    .start__wrapper intro{
+        @apply flex flex-wrap
+    } 
 }
