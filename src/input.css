@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+    font-family: Borel;
+    src: url("../fonts/Borel-Regular.woff");
+}
+
+
 .container{
     max-width: 90rem;
     margin: 0 auto;
@@ -9,6 +15,8 @@
 }
 
 @layer components{
+
+    /* HEADERS */
     .header{
     @apply  fixed w-full shadow-lg bg-white bg-blend-overlay border-b-4
     }
@@ -46,12 +54,12 @@
     .toggle__menu span{
     @apply  w-[2rem] h-[.3rem] bg-black block rounded-full 
     }
-
     .buhok.open{
         @apply h-[100vh] w-[100%] bg-black absolute z-[999] top-[5.6rem] left-[0] opacity-[.5] transition-all
     }
 
 
+    /* KALBO */
     .kalbo{
         @apply bg-white
     }
@@ -89,6 +97,7 @@
         @apply font-semibold
     }
 
+    /* REPEATABLE PATTERNS */
     .btn{
         background-color: transparent;
         padding: .2rem 1rem;
@@ -104,6 +113,7 @@
         background-color: #006341;
     }
 
+    /* BEVERAGE */
     .beverage{
         @apply bg-white
     }
@@ -112,6 +122,42 @@
     }
     .beverage__nav{
         @apply bg-fwhite-light shadow-lg flex flex-wrap justify-center max-w-[40rem] mx-auto gap-[2rem]
+    }
+
+    /* GETTING STARTED */
+    .start{
+        @apply  bg-white 
+    }
+    .start__wrapper intro{
+        @apply flex text-center
+    } 
+    .intro h4{
+        @apply text-[2rem]
+    }
+    .steps__number h2{
+        @apply font-semibold
+    }
+    .steps__number a{
+        @apply underline font-medium
+    }
+
+    /* EARN__PAGE */
+
+    .earn{
+        @apply bg-cream
+    }
+    /* EXTRAS___PAGE */
+    .extras{
+        @apply bg-white
+    }
+    .intro__extras{
+       @apply text-center
+    }
+    .intro__extras h4{
+        @apply text-[2rem]
+    }
+    .extras__number img{
+        @apply h-[2rem] p-[2rem] 
     }
 
     /*BANNER*/
@@ -133,11 +179,10 @@
     
     }
 
-    .start{
-        @apply  bg-white 
+    /*CIRCLE*/
+    .circle{
+       @apply border border-black rounded-full  m-[2rem] w-[5rem] h-[5rem] p-[2rem] pt-[1rem] text-[2rem]
     }
 
-    .start__wrapper intro{
-        @apply flex flex-wrap
-    } 
+    
 }
