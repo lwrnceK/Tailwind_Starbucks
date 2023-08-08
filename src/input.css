@@ -21,13 +21,13 @@
     @apply  fixed w-full shadow-lg bg-white bg-blend-overlay border-b-4
     }
     .header .header__wrapper{
-    @apply max-w-[90rem] mx-auto flex items-center justify-between lg:p-[]
+    @apply max-w-[90rem] mx-auto flex items-center justify-between
     }
     .header .branding{
     @apply flex items-center gap-[1rem]
     }
     .header .header__nav{
-    @apply  absolute shadow-xl h-[100vh] bg-white font-bold top-[8.2rem] right-[-25rem] text-[1rem] transition-all
+    @apply  absolute shadow-xl h-[100vh] bg-white font-bold top-[6.2rem] right-[-20rem] text-[1rem] transition-all
     lg:static lg:h-auto lg:w-full lg:shadow-none lg:font-bold   
     }
     .header .header__nav .nav__left{
@@ -43,7 +43,7 @@
     @apply m-[3rem] items-center
     }
     .header .header__nav.open{
-    @apply absolute right-[.1rem]
+    @apply absolute right-[0rem]
     }
     .header .header__three{
     @apply hidden lg:flex lg:items-center lg:gap-[1.5rem] lg:text-[1rem] lg:font-bold
@@ -124,28 +124,46 @@
         @apply bg-fwhite-light shadow-lg flex flex-wrap justify-center max-w-[40rem] mx-auto gap-[2rem]
     }
 
+    /*CIRCLE*/
+    .circle{
+        @apply border border-black rounded-full m-[2rem] px-[2rem] py-[0.9rem] text-[2rem]
+     }
+
     /* GETTING STARTED */
     .start{
         @apply  bg-white 
     }
-    .start__wrapper intro{
-        @apply flex text-center
+    .intro{
+        @apply text-center pb-[1rem]
     } 
     .intro h4{
         @apply text-[2rem]
     }
     .steps__number h2{
-        @apply font-semibold
+        @apply flex border border-black text-center rounded-full m-[2rem] px-[1.85rem] py-[0.9rem] text-[2rem]
+    }
+    .steps__number h3{
+        @apply font-semibold pb-[1rem]
     }
     .steps__number a{
         @apply underline font-medium
     }
+    .steps__number p{
+        @apply font-[10rem]
+    }
+    .steps__number .step__one{
+        @apply  flex items-center
+    }
+    .steps__number .step__two{
+        @apply  flex items-center
+    }
+    .steps__number .step__three{
+        @apply  flex items-center
+    }
 
     /* EARN__PAGE */
 
-    .earn{
-        @apply bg-cream
-    }
+    
     /* EXTRAS___PAGE */
     .extras{
         @apply bg-white
@@ -156,9 +174,79 @@
     .intro__extras h4{
         @apply text-[2rem]
     }
-    .extras__number img{
-        @apply h-[2rem] p-[2rem] 
+    .extras__number{
+        @apply py-[2rem] 
     }
+    .extras__number img{
+        @apply h-[7rem] 
+    }
+    .extras__number h2{
+        @apply font-semibold
+    }
+    .extras__number a{
+        @apply underline font-semibold
+    }
+    .extras__number .extras__one{
+        @apply flex items-center gap-[2rem] pb-[1rem]
+    }
+    .extras__one .desc__ext p,h2{
+        @apply pb-[1rem]
+    }
+    .extras__number .extras__two{
+        @apply flex items-center gap-[2rem] pb-[1rem]
+    }
+    .extras__two .desc__ext p,h2{
+        @apply pb-[1rem]
+    }
+    .extras__number .extras__three{
+        @apply flex items-center gap-[2rem] pb-[1rem]
+    }
+    .extras__three .desc__ext p,h2{
+        @apply pb-[1rem]
+    }
+
+    .questions{
+        @apply bg-white
+    }
+    .questions h2{
+        @apply font-semibold text-[1.5rem] 
+    }
+    .questions p{
+        @apply text-[.9rem]
+    }
+    .questions a{
+        @apply underline font-semibold
+    }
+
+    /* CASH--CARD */
+   .earn{
+    @apply bg-cream
+   }
+   .earn__intro{
+    @apply text-center
+   }
+   .earn__intro h2{
+    @apply font-semibold text-[1.5rem]
+   }
+   .earn__intro p{
+    @apply text-[.9rem] pb-[3rem]
+   }
+   .rewards__one{
+    @apply items-center
+   }
+   .rewards__one__text h2{
+    @apply font-semibold text-[1.5rem] pb-0
+   }
+   .rewards__one__text p{
+    @apply text-[.9rem] 
+   }
+   
+   .rewards__desc{
+    @apply flex gap-[2rem] 
+   }
+   .rewards__desc img{
+    @apply h-[9.5rem] 
+   }
 
     /*BANNER*/
     .banner{
@@ -179,10 +267,7 @@
     
     }
 
-    /*CIRCLE*/
-    .circle{
-       @apply border border-black rounded-full  m-[2rem] w-[5rem] h-[5rem] p-[2rem] pt-[1rem] text-[2rem]
-    }
+    
 
     
 }
