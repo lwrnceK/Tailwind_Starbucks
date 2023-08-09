@@ -131,7 +131,7 @@
 
     /* GETTING STARTED */
     .start{
-        @apply  bg-white 
+        @apply  bg-white py-[5rem]
     }
     .intro{
         @apply text-center pb-[1rem]
@@ -139,11 +139,15 @@
     .intro h4{
         @apply text-[2rem]
     }
+    .steps__number{
+        @apply  flex flex-col lg:flex-row
+    }
     .steps__number h2{
-        @apply flex border border-black text-center rounded-full m-[2rem] px-[1.85rem] py-[0.9rem] text-[2rem]
+        @apply border border-black text-center rounded-full m-[2rem] px-[1rem] py-[0.5rem] text-[1rem] float-left
+        lg:m-[2rem] lg:px-[.5rem] lg:py-[0.7rem] lg:text-[1rem] lg:w-[3rem] lg:mx-auto lg:float-none
     }
     .steps__number h3{
-        @apply font-semibold pb-[1rem]
+        @apply font-semibold pb-[.5rem] 
     }
     .steps__number a{
         @apply underline font-medium
@@ -151,21 +155,22 @@
     .steps__number p{
         @apply font-[10rem]
     }
-    .steps__number .step__one{
-        @apply  flex items-center
+    .step__one{
+        @apply items-center pb-[2rem] lg:w-[50%] mx-auto
     }
-    .steps__number .step__two{
-        @apply  flex items-center
+    .step__one h3{
+        @apply items-center lg:text-center text-[1rem] lg:text-[1.5rem]
     }
-    .steps__number .step__three{
-        @apply  flex items-center
+    .step__one p{
+        @apply items-center lg:text-center text-[1rem] 
     }
+
 
     /* EARN__PAGE */
 
     
     /* EXTRAS___PAGE */
-    .extras{
+    /* .extras{
         @apply bg-white
     }
     .intro__extras{
@@ -175,35 +180,63 @@
         @apply text-[2rem]
     }
     .extras__number{
-        @apply py-[2rem] 
+        @apply py-[2rem] items-center flex flex-col mx-auto lg:flex-row lg:text-center
     }
     .extras__number img{
-        @apply h-[7rem] 
+        @apply  float-left mb-[3rem] mr-[1rem] lg:float-none
     }
     .extras__number h2{
-        @apply font-semibold
+        @apply font-semibold lg:text-center
     }
     .extras__number a{
         @apply underline font-semibold
     }
     .extras__number .extras__one{
-        @apply flex items-center gap-[2rem] pb-[1rem]
+        @apply  gap-[2rem] pb-[1rem] 
     }
-    .extras__one .desc__ext p,h2{
+    .extras__one p,h2{
         @apply pb-[1rem]
+    } */
+    
+    .extras{
+        @apply  bg-white py-[5rem]
     }
-    .extras__number .extras__two{
-        @apply flex items-center gap-[2rem] pb-[1rem]
+    .intro__extras{
+        @apply text-center pb-[2rem]
+    } 
+    .intro__extras h4{
+        @apply text-[2rem]
     }
-    .extras__two .desc__ext p,h2{
-        @apply pb-[1rem]
+    .extras__number{
+        @apply  flex flex-col lg:flex-row gap-[2rem]
     }
-    .extras__number .extras__three{
-        @apply flex items-center gap-[2rem] pb-[1rem]
+    .extras__number img{
+        @apply mr-[1rem] w-[30%] text-[1rem] float-left
+        lg:m-[2rem] lg:w-[30%] lg:px-[rem] lg:py-[0.7rem] lg:text-[1rem] lg:mx-auto lg:float-none
     }
-    .extras__three .desc__ext p,h2{
-        @apply pb-[1rem]
+    .extras__number h3{
+        @apply font-semibold pb-[.5rem] 
     }
+    .extras__number a{
+        @apply underline font-medium 
+    }
+    .extras__anchor a{
+        @apply items-center 
+    }
+    .extras__number p{
+        @apply font-[10rem] pb-[1rem]
+    }
+    .extras__one{
+        @apply items-center lg:text-center pb-[4rem] lg:w-[50%] mx-auto
+    }
+    .extras__one h3{
+        @apply items-center lg:text-center text-[1rem] lg:text-[1.5rem]
+    }
+    .extras__one p{
+        @apply items-center lg:text-center text-[.9rem] lg:text-[1.1rem]
+    }
+    
+
 
     .questions{
         @apply bg-white
@@ -234,11 +267,20 @@
    .rewards__one{
     @apply items-center
    }
+   .rewards__title{
+    @apply pb-[2rem]
+   }
    .rewards__one__text h2{
-    @apply font-semibold text-[1.5rem] pb-0
+    @apply font-semibold text-[1.5rem] pb-0 
    }
    .rewards__one__text p{
     @apply text-[.9rem] 
+   }
+   .rewards__one__text:not(:last-child){
+    @apply pb-[2rem]
+   }
+   .rewards__one__text:last-child{
+    @apply pt-[2rem] border-t-2
    }
    
    .rewards__desc{
