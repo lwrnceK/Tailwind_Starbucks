@@ -7,8 +7,13 @@
     src: url("../fonts/Borel-Regular.woff");
 
     font-family: Montserrat;
-    src: url("../fonts/Montserrat-VariableFont_wght.woff")
+    src: url("../fonts/Montserrat-VariableFont_wght.woff");
+
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Black.woff");
 }
+
+
 
 .container{
     max-width: 90rem;
@@ -115,6 +120,24 @@
     }
     .btn.bg--green:hover {
         background-color: #006341;
+    }
+    .btn.bg--black{
+        background:transparent;
+        color:#000000;
+        border:1px solid #000000;
+    }
+    .btn.bg--black:hover {
+        background: rgba(211, 211, 211, .5);
+        /* background-color: #ffffff;
+        opacity:.5; */
+    }
+    .btn.bg--white{
+        background:transparent;
+        color:#ffffff;
+        border:1px solid #ffffff;
+    }
+    .btn.bg--white:hover {
+        background: rgba(0, 0, 0, .5);
     }
 
     /* BEVERAGE */
@@ -400,11 +423,98 @@
     .drop li{
     @apply text-[1rem] hover:text-berde
     }
+    .forms__wrapper a{
+        @apply underline text-berde hover:no-underline
+    }
+    .forms__wrapper h4{
+        @apply text-[.9rem] font-semibold
+    }
+    .forms__first h4{
+        @apply font-thin pb-[1rem]
+    }
+    .forms__first p{
+        @apply pb-[.5rem] text-[.9rem]
+    }
+    .forms__second h4{
+        @apply pb-[1rem] pt-[1rem]
+    }
+    .forms__second p{
+        @apply pb-[1rem] text-[.9rem]
+    }
+    .forms__third h4{
+        @apply pb-[1rem]
+    }
+    .forms__third p{
+        @apply pb-[1rem] text-[.9rem]
+    }
+    .forms__fourth h4{
+        @apply pb-[1rem]
+    }
+    .forms__fourth p{
+        @apply pb-[1rem] text-[.9rem] 
+    }
+    .forms__fifth h4{
+        @apply pb-[1rem] 
+    }
+    .forms__fifth p{
+        @apply text-[.9rem] 
+    }
+    /* .forms__main{
+        @apply lg:grid lg:grid-cols-2
+    } */
+    .forms__main{
+        @apply lg:grid lg:grid-cols-2 
+    }
+    .forms__second{
+        @apply lg:h-full lg:my-auto
+    }
+    .forms__third{
+        @apply lg:h-full lg:my-auto
+    }
+    .forms__fourth{
+        @apply lg:my-auto lg:h-full
+    }
+    .forms__fifth{
+        @apply lg:h-full lg:my-auto 
+    }
+    .drop{
+        @apply overflow-hidden max-h-[0rem] lg:max-h-[25rem]
+    }
+    .drop.open{
+        @apply max-h-[25rem] 
+    }
+    .footer__nav ul.nav li a i.open{
+        @apply ease-in duration-[.5s] rotate-180 
+    }
+    .footer__nav ul.nav li a i{
+        @apply lg:hidden
+    }
     .footer__nav ul.nav li a{
-    @apply flex justify-between items-center
+        @apply flex pb-[2rem]
+    }
+    .drop li{
+        @apply text-[1rem] hover:text-berde
+    }
+    .footer__nav ul.nav li a{
+        @apply flex justify-between items-center
     }
     .footer__nav{
-    @apply lg:flex lg:gap-[5rem] 
+        @apply lg:flex lg:gap-[5rem] 
+    }
+    .puter__wrapper{
+        @apply flex gap-[1.5rem] text-[2rem] pt-[2rem]
+    }
+    .puter__wrapper a{
+        @apply hover:bg-gray-200 rounded-full 
+    }
+    .last__wrapper{
+        @apply flex flex-col gap-[1rem] font-light lg:flex lg:flex-row
+    }
+    .last__p p{
+    @apply pt-[1rem] text-gray-400
+    }
+    .last__wrapper a{
+        @apply hover:underline
     }
 
     /*BANNER*/
@@ -426,7 +536,64 @@
     
     }
 
-    
+    /* HOME */
+    .offer__wrapper{
+        @apply pt-[5rem] lg:pt-[11rem]
+    }
+    .offer .container{
+        @apply px-0
+    }
+    .order__one{
+        @apply  my-[2rem]
+    }
+    .order__two{
+        @apply  my-[2rem]
+    }
+    .order__three{
+        @apply  my-[2rem]
+    }
+    .order__four{
+        @apply  my-[2rem]
+    }
+    .order__one .order__one__text{
+        @apply order-last text-center pt-[2rem] pb-[2rem] my-auto  mx-auto w-[90%] lg:w-[70%] lg:order-none
+    }
+    .order__one__text h2{
+        @apply font-semibold text-[2rem] pb-[1rem] lg:text-[3.5rem]
+    }
+    .order__one__text p{
+        @apply pb-[1rem] lg:text-[1.5rem]
+    }
+    .order__two .order__two__text{
+        @apply order-last text-center text-white pt-[2rem] pb-[2rem] my-auto  mx-auto w-[90%] lg:w-[70%] 
+    }
+    .order__two__text h2{
+        @apply font-semibold text-[2rem] pb-[1rem] lg:text-[3.5rem]
+    }
+    .order__two__text p{
+        @apply pb-[1rem] lg:text-[1.5rem]
+    }
+    .order__three .order__three__text{
+        @apply order-last text-center pt-[2rem] pb-[2rem] my-auto  mx-auto w-[90%] lg:w-[70%] lg:order-none
+    }
+    .order__three__text h2{
+        @apply font-semibold text-[2rem] pb-[1rem] lg:text-[3.5rem]
+    }
+    .order__three__text p{
+        @apply pb-[1rem] lg:text-[1.5rem]
+    }
+    .order__four .order__four__text{
+        @apply order-last text-center pt-[2rem] pb-[2rem] my-auto  mx-auto w-[90%] lg:w-[70%] 
+    }
+    .order__four__text h2{
+        @apply font-semibold text-[2rem] pb-[1rem] lg:text-[3.5rem]
+    }
+    .order__four__text p{
+        @apply pb-[1rem] lg:text-[1.5rem]
+    }
 
+    .ps{
+        @apply text-center text-[.8rem] mx-auto w-[28rem] lg:w-[35rem] pb-[3rem] 
+    }
     
 }
